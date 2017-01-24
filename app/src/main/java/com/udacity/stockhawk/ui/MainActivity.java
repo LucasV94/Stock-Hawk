@@ -97,13 +97,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         QuoteSyncJob.syncImmediately(this);
 
         if (!networkUp()) {
-            if (!networkUp() && adapter.getItemCount() == 0) {
+            swipeRefreshLayout.setRefreshing(false);
+            Toast.makeText(this, R.string.toast_no_connectivity, Toast.LENGTH_LONG).show();
+            if (adapter.getItemCount() == 0) {
                 swipeRefreshLayout.setRefreshing(false);
                 error.setText(getString(R.string.error_no_network));
                 error.setVisibility(View.VISIBLE);
-            } else {
-                swipeRefreshLayout.setRefreshing(false);
-                Toast.makeText(this, R.string.toast_no_connectivity, Toast.LENGTH_LONG).show();
             }
         } else if (PrefUtils.getStocks(this).size() == 0) {
             swipeRefreshLayout.setRefreshing(false);
