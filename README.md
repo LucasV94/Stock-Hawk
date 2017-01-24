@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Stock Hawk
 
 This is the starter code for project 3 in Udacity's [Android Developer Nanodegree](https://www.udacity.com/course/android-developer-nanodegree-by-google--nd801). 
@@ -9,3 +10,11 @@ If you're a Nanodegree student check your work againt the project [rubric](https
 # Contrubuting
 
 Pull requests gratefully accepted.
+=======
+# Stock-Hawk
+Udacity - Make Production Ready
+
+This is for Udacity Android Developer Nanogree Project #3
+
+which includes adjusting the program to be production ready.
+>>>>>>> origin/master
