@@ -22,7 +22,7 @@
 
 
     <string name="dialog_title">Add Stock</string>
-    <string name="dialog_hint">Symbol (e.g. GOOG)</string>
+    <string name="dialog_hint">Ticker (e.g. GOOG)</string>
     <string name="dialog_cancel">Cancel</string>
     <string name="dialog_add">Add</string>
 
@@ -34,5 +34,6 @@
 
     <string name="toast_stock_added_no_connectivity">Symbol %s added. Will refresh when network available.</string>
     <string name="toast_no_connectivity">Will refresh when network available.</string>
+    <string name="toast_invalid">Ticker %s is incorrect!</string>
 
 </resources>
