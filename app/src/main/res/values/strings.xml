@@ -33,7 +33,7 @@
     <string name="toast_no_connectivity" translatable="true">Will refresh when network available.</string>
     <string name="toast_invalid" translatable="true">Ticker %s is incorrect!</string>
 
-    <!-- Variables -->
-    <string name="package_name" translatable="false">com.udacity.stockhawk</string>
+    <!-- For Shared Element Transitions -->
+    <string name="detail_icon_transition_name" translatable="false">TN_DetailIcon</string>
 
 </resources>
