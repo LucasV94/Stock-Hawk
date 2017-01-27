@@ -1,10 +1,13 @@
 package com.udacity.stockhawk.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -46,7 +49,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onClick(String symbol) {
+
         Timber.d("Symbol clicked: %s", symbol);
+        Intent intent = new Intent(this, DetailActivity.class);
+
+
+        ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeBasic();
+        ActivityCompat.startActivity(this, intent, optionsCompat.toBundle());
     }
 
     @Override
@@ -126,7 +135,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 String message = getString(R.string.toast_stock_added_no_connectivity, symbol);
                 Toast.makeText(this, message, Toast.LENGTH_LONG).show();
             }
-
             PrefUtils.addStock(this, symbol);
             QuoteSyncJob.syncImmediately(this);
         }
@@ -161,8 +169,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private void setDisplayModeMenuItemIcon(MenuItem item) {
         if (PrefUtils.getDisplayMode(this)
                 .equals(getString(R.string.pref_display_mode_absolute_key))) {
+            item.setTitle(R.string.preference_change_to_absolute);
             item.setIcon(R.drawable.ic_percentage);
         } else {
+            item.setTitle(R.string.preference_change_to_percentage);
             item.setIcon(R.drawable.ic_dollar);
         }
     }
