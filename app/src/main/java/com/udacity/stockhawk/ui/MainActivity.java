@@ -49,8 +49,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onClick(String symbol) {
+
         Timber.d("Symbol clicked: %s", symbol);
         Intent intent = new Intent(this, DetailActivity.class);
+
 
         ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeBasic();
         ActivityCompat.startActivity(this, intent, optionsCompat.toBundle());
@@ -167,8 +169,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private void setDisplayModeMenuItemIcon(MenuItem item) {
         if (PrefUtils.getDisplayMode(this)
                 .equals(getString(R.string.pref_display_mode_absolute_key))) {
+            item.setTitle(R.string.preference_change_to_absolute);
             item.setIcon(R.drawable.ic_percentage);
         } else {
+            item.setTitle(R.string.preference_change_to_percentage);
             item.setIcon(R.drawable.ic_dollar);
         }
     }
