@@ -4,9 +4,37 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="226dp"
+        android:id="@+id/stockInfo">
+
+        <TextView
+            android:text="AAPL"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:id="@+id/stockName"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="$121.95"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:id="@+id/stockPrice"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="+0.01%"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:id="@+id/stockDiff"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <WebView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Stocks Will go Here" />
-
+        android:id="@+id/webView" />
 </LinearLayout>
