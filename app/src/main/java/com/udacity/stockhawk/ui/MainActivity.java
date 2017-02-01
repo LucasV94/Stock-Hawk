@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         Timber.d("Symbol clicked: %s", symbol);
         Intent intent = new Intent(this, DetailActivity.class);
-
+        intent.putExtra(getString(R.string.intent_extra_symbol),symbol);
 
         ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeBasic();
         ActivityCompat.startActivity(this, intent, optionsCompat.toBundle());

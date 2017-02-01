@@ -1,40 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_width="match_parent">
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/stockChart"
         android:layout_width="match_parent"
-        android:layout_height="226dp"
-        android:id="@+id/stockInfo">
+        android:layout_height="match_parent" />
 
-        <TextView
-            android:text="AAPL"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:id="@+id/stockName"
-            android:layout_weight="1" />
-
-        <TextView
-            android:text="$121.95"
-            android:layout_width="wrap_content"
-            android:layout_height="54dp"
-            android:id="@+id/stockPrice"
-            android:layout_weight="1" />
-
-        <TextView
-            android:text="+0.01%"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:id="@+id/stockDiff"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-
-    <WebView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/webView" />
-</LinearLayout>
+</RelativeLayout>

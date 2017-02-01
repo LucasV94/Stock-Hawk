@@ -147,17 +147,6 @@ public final class QuoteSyncJob {
         } catch (IOException exception) {
             Timber.e(exception, "Error fetching stock quotes");
             setStockStatus(context, STOCK_STATUS_SERVER_DOWN);
-//        } catch (NullPointerException exception) {
-//            String symbol = "GOOG";
-//            Timber.e(exception, "Incorrect stock symbol entered : " + symbol);
-//            Toast.makeText(context, R.string.toast_invalid, Toast.LENGTH_LONG);
-//
-//            PrefUtils.removeStock(context, symbol);
-//            if (PrefUtils.getStocks(context).size() == 0) {
-//                setStockStatus(context, STOCK_STATUS_EMPTY);
-//            } else {
-//                setStockStatus(context, STOCK_STATUS_EMPTY);
-//            }
         }
     }
 

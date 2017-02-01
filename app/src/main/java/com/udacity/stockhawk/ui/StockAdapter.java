@@ -53,6 +53,7 @@ class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHolder> {
         return cursor.getString(Contract.Quote.POSITION_SYMBOL);
     }
 
+
     @Override
     public StockViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 

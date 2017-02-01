@@ -11,6 +11,9 @@
     <string name="pref_display_mode_percentage_key" translatable="false">percentage</string>
     <string name="pref_stock_key" translatable="false">stock</string>
     <string name="pref_stock_status_key" translatable="false">stock-status</string>
+    <string name="intent_extra_symbol" translatable="false">symbol</string>
+    <string name="marker_placeholder" translatable="false">0000.00</string>
+
 
     <!-- Preference Defaults -->
     <string name="default_stocks_yahoo" translatable="false">YHOO</string>

@@ -87,33 +87,4 @@ public final class PrefUtils {
 
         editor.apply();
     }
-
-    /**
-     * Returns true if the network is available or about to become available.
-     *
-     * @param c Context used to get the ConnectivityManager
-     * @return true if the network is available
-     */
-
-//    /**
-//     *
-//     * @param c Context used to get the SharedPreferences
-//     * @return the location status integer type
-//     */
-//    static public @QuoteSyncJob.StockStatus
-//    int getStockStatus(Context c){
-//        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(c);
-//        return sp.getInt(c.getString(R.string.pref_stock_status_key), QuoteSyncJob.STOCK_STATUS_UNKNOWN);
-//    }
-//
-//    /**
-//     * Resets the stock status.  (Sets it to QuoteSyncJob.STOCK_STATUS_UNKNOWN)
-//     * @param c Context used to get the SharedPreferences
-//     */
-//    static public void resetStockjStatus(Context c){
-//        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(c);
-//        SharedPreferences.Editor spe = sp.edit();
-//        spe.putInt(c.getString(R.string.pref_stock_status_key), QuoteSyncJob.STOCK_STATUS_UNKNOWN);
-//        spe.apply();
-//    }
 }
