@@ -6,8 +6,6 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -24,11 +22,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import timber.log.Timber;
 
-import static android.R.attr.data;
-import static com.udacity.stockhawk.R.id.stockChart;
-import static com.udacity.stockhawk.R.id.symbol;
 
 /**
  * Created by Lucas on 1/26/2017.
@@ -56,20 +50,17 @@ public class DetailActivity extends AppCompatActivity {
 
             String h = cursor.getString(0);
             cursor.close();
-            //Log.v("Cursor Object",h);
             String[] data = h.split("\\r?\\n");
 
             for (String d : data) {
                 String[] val = d.split(",");
-                //Log.v("Cursor Object",""+Float.parseFloat(val[0])+", "+Float.parseFloat(val[1]));
                 entries.add(new Entry(Float.parseFloat(val[0]), Float.parseFloat(val[1])));
             }
 
             Collections.sort(entries, new EntryXComparator());
 
-            //Log.v("Cursor Object",entries.toString());
 
-            LineDataSet dataSet = new LineDataSet(entries, symbol); // add entries to dataset
+            LineDataSet dataSet = new LineDataSet(entries, symbol);
             dataSet.setColor(Color.RED);
             dataSet.setValueTextColor(Color.BLACK);
             dataSet.setDrawCircles(false);

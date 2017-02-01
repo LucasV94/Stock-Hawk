@@ -11,9 +11,6 @@
     <string name="pref_display_mode_percentage_key" translatable="false">percentage</string>
     <string name="pref_stock_key" translatable="false">stock</string>
     <string name="pref_stock_status_key" translatable="false">stock-status</string>
-    <string name="intent_extra_symbol" translatable="false">symbol</string>
-    <string name="marker_placeholder" translatable="false">0000.00</string>
-
 
     <!-- Preference Defaults -->
     <string name="default_stocks_yahoo" translatable="false">YHOO</string>
@@ -38,8 +35,17 @@
     <string name="toast_stock_added_no_connectivity" translatable="true">Symbol %s added. Will refresh when network available.</string>
     <string name="toast_no_connectivity" translatable="true">Will refresh when network available.</string>
     <string name="toast_invalid" translatable="true">Ticker %s is incorrect!</string>
+    <string name="empty_stock_list">Stock information is not available.</string>
+
 
     <!-- For Shared Element Transitions -->
     <string name="detail_icon_transition_name" translatable="false">TN_DetailIcon</string>
+
+    <!-- Labels -->
+    <string name="intent_extra_symbol" translatable="false">symbol</string>
+    <string name="marker_placeholder" translatable="false">0000.00</string>
+    <string name="widget_label" translatable="false">Stocks</string>
+    <string name="widget_description">Stock Hawk widget</string>
+
 
 </resources>
